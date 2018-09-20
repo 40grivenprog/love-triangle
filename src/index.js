@@ -8,6 +8,7 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 	for (var i = 0; i < n; i++) {
 		for (var j = 0; j < n; j++) {
 			for (var k = 0; k < n; k++) {
+				if (i == j && j == k && i == k) continue;
 				if (preferences[i] == j + 1 && preferences[j] == k + 1 && preferences[k] == i + 1) {
 					ans++;
 				}
